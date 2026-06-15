@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyanshu ❤️ Prachi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   CRYSTAL HEART BACKGROUND (persistent)   -->
+<!-- ══════════════════════════════════════════ -->
+<canvas id="crystalHeartCanvas"></canvas>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   FLOATING AMBIENT PARTICLES              -->
+<!-- ══════════════════════════════════════════ -->
+<canvas id="particlesBg"></canvas>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 1 — OPENING                     -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s1" class="section full-screen star-bg">
+  <canvas id="starsCanvas"></canvas>
+  <div class="s1-content">
+    <div class="title-glow">Priyanshu ❤️ Prachi</div>
+    <p class="subtitle">A story built on love, trust and patience.</p>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <span>Scroll to begin</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 2 — NAME MEANING                -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s2" class="section full-screen">
+  <canvas id="nameParticlesCanvas"></canvas>
+  <div class="s2-content name-meaning-content">
+    <div class="name-line" data-delay="0">Prachi is the first light of the morning,<br>and Priyanshu is the gentle ray that carries its warmth. 🌅✨</div>
+    <div class="name-line" data-delay="1">When Prachi rises, Priyanshu's world lights up. ❤️</div>
+    <div class="name-line" data-delay="2">Prachi is the name of a new beginning,<br>and Priyanshu is the smile that comes with it. 🌸</div>
+    <div class="name-line" data-delay="3">The sun rises from the East every day,<br>perhaps because that's where Prachi lives. 🌄</div>
+    <div class="name-line" data-delay="4">Prachi and Priyanshu — one direction and one ray of light,<br>together they make the world shine a little brighter. ✨❤️</div>
+    <div class="name-line" data-delay="5">If Prachi is the morning,<br>then Priyanshu is the first ray waiting to greet her. ☀️</div>
+    <div class="name-line" data-delay="6">Their names may be different,<br>but their hearts beat as one. ❤️</div>
+    <div class="name-line signature" data-delay="7">— By PS ❤️</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 3 — PARTICLE PHOTO REVEAL       -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s3" class="section full-screen">
+  <canvas id="photoParticleCanvas"></canvas>
+  <div class="s3-overlay">
+    <p class="photo-text">Every beautiful memory begins with you. ❤️</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 4 — BUTTERFLY MEMORY WORLD      -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s4" class="section full-screen">
+  <canvas id="butterflyCanvas"></canvas>
+  <div class="s4-center">
+    <div class="photo-frame">
+      <img id="prachiPhoto" src="images/prachi.jpg" alt="Prachi" onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex'"/>
+      <div id="photoFallback" class="photo-fallback">
+        <div class="fallback-heart">❤️</div>
+        <span>Prachi</span>
+      </div>
+    </div>
+  </div>
+  <div class="s4-caption">
+    <p>Each butterfly carries a memory of you ✨</p>
+    <p class="s4-hint">Click a butterfly to release it into stars</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 5 — MOON & EARTH STORY          -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s5" class="section full-screen">
+  <canvas id="spaceCanvas"></canvas>
+  <div class="s5-text s5-text-1">
+    <p>Distance alag kar sakti hai,</p>
+    <p>connection nahi.</p>
+  </div>
+  <div class="s5-text s5-text-2">
+    <p>Trust is why we're still here. ❤️</p>
+  </div>
+  <div class="s5-labels">
+    <div class="s5-label earth-label">🌍 Priyanshu</div>
+    <div class="s5-label moon-label">🌙 Prachi</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 6 — LOVE YOU SECTION            -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s6" class="section full-screen">
+  <div class="s6-content">
+    <div class="s6-quote">
+      <p>Agar trust na hota,</p>
+      <p>to itna pyar bhi na hota. ❤️</p>
+    </div>
+    <button id="loveYouBtn" class="love-btn">❤️ Love You</button>
+    <div id="loveMessage" class="love-message hidden">Love You Bachha ❤️</div>
+  </div>
+  <canvas id="heartsCanvas"></canvas>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 7 — MESSAGE FOR PRIYANSHU       -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s7" class="section full-screen">
+  <div class="s7-content">
+    <h2 class="message-title">Message For Priyanshu ❤️</h2>
+    <div class="message-box-wrap">
+      <textarea id="messageInput" class="message-textarea" placeholder="Write your heart out, Prachi... 💕" rows="6"></textarea>
+      <button id="sendBtn" class="send-btn">Send ❤️</button>
+      <div id="sendSuccess" class="send-success hidden">
+        <div class="paper-plane">✉️</div>
+        <p>Your message has reached Priyanshu ❤️</p>
+      </div>
+    </div>
+  </div>
+  <canvas id="msgParticlesCanvas"></canvas>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 8 — LONG DISTANCE MAP           -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s8" class="section full-screen">
+  <div class="map-container">
+    <div class="map-bg">
+      <!-- Stylized India map with SVG animation -->
+      <svg id="indiaSvg" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+        <!-- India outline (simplified) -->
+        <path id="indiaOutline" d="M 320,80 L 380,60 L 450,75 L 500,90 L 540,110 L 570,140 L 600,160 L 620,190 L 630,220 L 640,260 L 645,300 L 640,340 L 630,380 L 615,420 L 600,450 L 585,480 L 565,510 L 545,540 L 520,570 L 500,600 L 475,630 L 450,660 L 420,690 L 400,720 L 380,750 L 360,780 L 340,810 L 330,830 L 320,820 L 310,800 L 300,775 L 290,750 L 280,720 L 270,690 L 260,660 L 250,630 L 240,600 L 230,570 L 220,540 L 215,510 L 210,480 L 205,450 L 200,420 L 198,390 L 195,360 L 193,330 L 190,300 L 190,270 L 192,240 L 195,210 L 200,185 L 210,160 L 225,140 L 245,120 L 268,100 L 295,85 Z" fill="rgba(255,192,203,0.05)" stroke="rgba(255,182,193,0.3)" stroke-width="1.5"/>
+
+        <!-- UP region highlight -->
+        <ellipse id="upRegion" cx="360" cy="300" rx="60" ry="40" fill="rgba(255,100,150,0.1)" stroke="rgba(255,100,150,0.4)" stroke-width="1"/>
+
+        <!-- Bihar region highlight -->
+        <ellipse id="biharRegion" cx="490" cy="290" rx="45" ry="35" fill="rgba(150,100,255,0.1)" stroke="rgba(150,100,255,0.4)" stroke-width="1"/>
+
+        <!-- Curved path between locations -->
+        <path id="lovePath" d="M 355,305 Q 420,230 485,295" fill="none" stroke="url(#pathGrad)" stroke-width="2.5" stroke-dasharray="200" stroke-dashoffset="200" stroke-linecap="round"/>
+
+        <!-- Gradient for path -->
+        <defs>
+          <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ff6eb4;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#ff9de2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#b06aff;stop-opacity:1" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Priyanshu marker (UP) -->
+        <g id="markerUP" opacity="0" filter="url(#glow)">
+          <circle cx="355" cy="305" r="8" fill="#ff6eb4" opacity="0.9"/>
+          <circle cx="355" cy="305" r="14" fill="none" stroke="#ff6eb4" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="355" cy="305" r="20" fill="none" stroke="#ff6eb4" stroke-width="0.8" opacity="0.3"/>
+          <text x="355" y="330" text-anchor="middle" fill="#ff6eb4" font-size="11" font-family="Dancing Script">Priyanshu 💙</text>
+          <text x="355" y="345" text-anchor="middle" fill="rgba(255,182,193,0.8)" font-size="9" font-family="Lato">Ganjdundwara, UP</text>
+        </g>
+
+        <!-- Prachi marker (Bihar) -->
+        <g id="markerBihar" opacity="0" filter="url(#glow)">
+          <circle cx="485" cy="295" r="8" fill="#b06aff" opacity="0.9"/>
+          <circle cx="485" cy="295" r="14" fill="none" stroke="#b06aff" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="485" cy="295" r="20" fill="none" stroke="#b06aff" stroke-width="0.8" opacity="0.3"/>
+          <text x="485" y="270" text-anchor="middle" fill="#b06aff" font-size="11" font-family="Dancing Script">Prachi 💜</text>
+          <text x="485" y="255" text-anchor="middle" fill="rgba(200,182,255,0.8)" font-size="9" font-family="Lato">Sabour, Bihar</text>
+        </g>
+
+        <!-- Distance label -->
+        <g id="distanceLabel" opacity="0">
+          <text x="420" y="248" text-anchor="middle" fill="rgba(255,220,255,0.9)" font-size="12" font-family="Dancing Script">~ 820 km of love ❤️</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="s8-text">
+    <p class="s8-line">Long distance relationships are hard.</p>
+    <p class="s8-line s8-line-2">But bachha,<br>hum kar lenge saath milkar. ❤️</p>
+    <p class="s8-line s8-line-3">Miss You Prachi.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!--   SECTION 9 — GRAND FINALE                -->
+<!-- ══════════════════════════════════════════ -->
+<section id="s9" class="section full-screen">
+  <!-- Flower overlay -->
+  <div id="flowerOverlay" class="flower-overlay">
+    <canvas id="flowersCanvas"></canvas>
+    <div class="tap-hint">Tap anywhere to reveal ✨</div>
+  </div>
+
+  <!-- Finale reveal -->
+  <div id="finaleReveal" class="finale-reveal hidden">
+    <div class="finale-photo-wrap">
+      <img id="prachi1Photo" src="images/prachi1.jpg" alt="Meri Prachi" onerror="this.style.display='none';document.getElementById('finaleFallback').style.display='flex'"/>
+      <div id="finaleFallback" class="finale-fallback">
+        <div class="big-heart">💕</div>
+      </div>
+    </div>
+    <div class="finale-text">
+      <p class="finale-line-1">Love You Bachha ❤️</p>
+      <p class="finale-line-2">Meri Prachi</p>
+      <p class="finale-line-3">Meri Cutie Pie</p>
+    </div>
+    <canvas id="finaleButterflies"></canvas>
+  </div>
+</section>
+
+<!-- Audio elements -->
+<div class="audio-ctrl" id="audioCtrl">
+  <button id="muteBtn" class="mute-btn" title="Toggle Music">🎵</button>
+</div>
+
+<script src="js/crystalHeart.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/nameParticles.js"></script>
+<script src="js/photoParticle.js"></script>
+<script src="js/butterfly.js"></script>
+<script src="js/space.js"></script>
+<script src="js/hearts.js"></script>
+<script src="js/map.js"></script>
+<script src="js/flowers.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
