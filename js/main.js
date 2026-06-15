@@ -172,8 +172,8 @@
     if (!window.emailjs) return false;
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID',      // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
+        'service_dvqvvmn',      // Replace with your EmailJS service ID
+        'service_dvqvvmn',     // Replace with your EmailJS template ID
         {
           to_email: 'fffightergamer3@gmail.com',
           subject: 'New Message From Prachi ❤️',
